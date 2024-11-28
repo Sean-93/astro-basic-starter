@@ -20,9 +20,9 @@ import Footer from "../components/Footer.astro";
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!-- FAVICON -->
-		<link rel="icon" type="image/svg" href="/favicon.svg" />
+		<!-- <link rel="icon" type="image/svg" href="/favicon.svg" /> -->
 		<!-- THEME COLOR -->
-		<meta name="theme-color" content="#800080" />
+		<meta name="theme-color" content="" />
 		<!-- GENERIC METADATA -->
 		<meta name="author" content="Sean Rooney" />
 		<meta name="generator" content={Astro.generator} />
@@ -40,11 +40,14 @@ import Footer from "../components/Footer.astro";
 		<!-- TWITTER/X CARD DATA -->
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
-		<!-- GOOGLE MATERIAL ICONS -->
-		<link
-			href="https://fonts.googleapis.com/icon?family=Material+Icons"
-			rel="stylesheet"
-		/>
+  <!-- FONTAWESOME -->
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+  integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
 		<!-- TITLE -->
 		<title>{title}</title>
 	</head>
@@ -55,29 +58,30 @@ import Footer from "../components/Footer.astro";
 		<!-- SITE FOOTER -->
 		<Footer />
 		<style is:global>
-			/* GOOGLE FONTS */
-			@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+  /* GOOGLE FONTS */
+  @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
 
-			html {
-				font-family: "Open Sans", sans-serif;
-				@apply text-slate-900;
-			}
+  html {
+        font-family: "Baloo 2", sans-serif;
+        background-color: #ffffff;
+        scroll-behavior: smooth;
+        text-wrap: balance;
+        scrollbar-gutter: stable;
+        overflow-x: hidden;
+        font-display: swap;
+        @apply text-slate-800;
+      }
 
-			h1 {
-				@apply text-5xl tracking-tight font-black text-purple-900; 
-			}
 
-			p, a {
-				@apply text-lg;
-			}
 
-			li {
-				@apply font-semibold;
-			}
-
-			a {
-				@apply text-sky-500 font-medium hover:underline underline-offset-4 break-words;
-			}
+	  main {
+        background-image: url("/green-half-bubble-1.png"), url("/gray-bubbles.png"),
+          url("/green-half-bubble-2.png");
+        background-position: 0% 5%, 50% 2.5%, top right;
+        background-repeat: no-repeat, no-repeat, no-repeat;
+        background-size: 10%, 15%, 15%, 15%;
+        pointer-events: auto;
+      }
 
 		</style>
 	</body>

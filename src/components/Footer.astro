@@ -2,16 +2,82 @@
 
 ---
 
-<footer class="bg-purple-100">
-    <section class="max-w-xl mx-auto p-8">
-        <p>
-            <i class="material-icons">rocket_launch</i> Get started with Astro today at <a
-                href="https://astro.build/"
-                target="_blank">https://astro.build/</a
-            >.
-        </p>
+<footer class="p-8">
+    <section class="flex flex-col">
+
+        <img src="/sungiant-logo.png" alt="Sun Giant Logo" class="max-w-xl self-end">
     </section>
+   <section class="flex justify-between items-center">
+<!-- ADDRESSES -->
+<div>
+
+        <div class="grid md:grid-cols-3 space-x-8 text-xl">
+          <div class="mb-8 lg:mb-0">
+            <p class="text-pink-600 font-semibold"
+              ><i class="fa-solid fa-location-dot"></i> Phoenix</p
+            >
+            <address>
+              <p>Tempe, AZ 85282</p>
+              <p>2305 W. Huntington Drive</p>
+            </address>
+            <p class="text-pink-600 font-semibold">
+              <a href="tel:602-454-7000" class="hover:underline">LOCAL: 602-454-7000</a>
+            </p>
+          </div>
+          <div class="mb-8 lg:mb-0">
+            <p class="text-pink-600 font-semibold"
+              ><i class="fa-solid fa-location-dot"></i> Tucson</p
+            >
+            <address>
+              <p>Tucson, AZ 85704</p>
+              <p>7090 N Oracle Road #178</p>
+            </address>
+            <p class="text-pink-600 font-semibold">
+              <a href="tel:520-770-9902" class="hover:underline">LOCAL: 520-770-9902</a>
+            </p>
+          </div>
+          <div class="mb-8 lg:mb-0">
+            <p
+              class="text-pink-600 font-semibold"
+              ><i class="fa-solid fa-location-dot"></i> Las Vegas</p
+            >
+            <address>
+              <p>Las Vegas, NV 89118</p>
+              <p>5424 S. Cameron St. #102</p>
+            </address>
+            <p class="text-pink-600 font-semibold">
+              <a href="tel:702-435-4820" class="hover:underline">LOCAL: 702-435-4820</a>
+            </p>
+          </div>
+        </div>
+
+
+</div>
+<!-- LOGOS ROW -->
+<div>
+
+
+<img src="/logos-row.png" alt="row of logos - Made in USA, Better Business Bureau, Use Solar, Pet Friendly, 5 Star Company, Best Product Guarantee, US Flag" class="max-w-5xl">
+</div>
+
+
+    
+   </section>
+   <!-- COPYRIGHT -->
+   <section class="text-right text-xl">
+    <p id="copyright">
+      <!-- COPYRIGHT GENERATED IN JS FILE -->
+    </p>
+  </section>
 </footer>
 <style>
 	
 </style>
+
+<script is:inline>
+    // FOR COPYRIGHT STATEMENT STAYING WITH CURRENT YEAR
+  
+    const copyrightStatement = `&copy; ${new Date().getFullYear()} Green Energy Inc.`;
+  
+    document.getElementById("copyright").innerHTML = copyrightStatement;
+  </script>
