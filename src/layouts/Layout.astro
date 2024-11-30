@@ -73,15 +73,21 @@ import Footer from "../components/Footer.astro";
       }
 
       @media screen and (min-width: 1024px) {
-        main {
+        html {
           background-image: url("/green-half-bubble-1.png"),
             url("/gray-bubbles.png"), url("/green-half-bubble-2.png");
           background-position: 0% 5%, 50% 2.5%, 100% 20%;
           background-repeat: no-repeat, no-repeat, no-repeat;
           background-size: 10%, 15%, 20%;
           pointer-events: auto;
-		  min-height: 100vh;
+          min-height: 100vh;
         }
+      }
+
+      main,
+      nav,
+      footer {
+        @apply max-w-[1920px] mx-auto;
       }
     </style>
   </body>
