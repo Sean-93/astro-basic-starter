@@ -4,40 +4,66 @@ import ServiceForm from "../components/ServiceForm.astro";
 ---
 
 <Layout
-	title="Fafco Solar Pool Heating Service"
-	description="We provide service to all Fafco customers in Arizon and "
-	keywords=""
-	canonicalURL="https://./"
-	robots="index, follow"
+  title="Fafco Solar Pool Heating Service"
+  description="We provide service to all Fafco customers in Arizon and "
+  keywords=""
+  canonicalURL="https://./"
+  robots="index, follow"
 >
-	<main class="p-8">
-		<section>
-
-				<h1 class="bg-sky-500 font-black text-white text-center rounded-full p-4 px-8 max-w-xl"><span class="text-5xl font-black block">FAFCO SERVICE</span> <br/><span class="text-2xl -mt-6 block">SOLAR POOL HEATING</span></h1>
-				
-			</section>
+  <main class="p-8">
+    <section>
+      <a href="/"
+        class="bg-sky-500 font-black text-white text-center rounded-full p-4 px-8 max-w-xl block"
+		title="Service on Fafco Solar Pool Heating in Arizona and Nevada"
+      >
+        <span class="text-5xl font-black block">FAFCO SERVICE</span>
+        <br /><span class="text-2xl -mt-6 block">SOLAR POOL HEATING</span>
+      </a>
+    </section>
+    <br />
+    <section>
+      <div class="flex flex-col flex-col-reverse lg:grid lg:grid-cols-2">
+        <div>
+          <!-- JOTFORM -->
+          <ServiceForm />
+        </div>
+        <div class="max-w-full">
+          <div class="flex items-center relative">
+            <img
+              src="/pool-illustration.png"
+              alt="pool illustration"
+              class="z-0 max-w-60 lg:max-w-2xl"
+            />
+            <img
+              src="/technician-with-big-wrench.png"
+              alt="illustration of technician with big wrench"
+              class="z-10 absolute right-0 lg:right-10 max-w-32 lg:max-w-xs"
+            />
+          </div>
+          <br />
+          <div class="max-w-3xl">
+			<h1 class="text-3xl lg:text-5xl font-black text-sky-500">Service for Fafco Solar Pool Heating - AZ & NV</h1>
 			<br/>
-		<section>
-			<div class="grid grid-cols-2">
-				<div>
-					<!-- JOTFORM -->
-					<ServiceForm />
-				  </div>
-				  <div>
-					<div class="flex items-center relative">
-						<img src="/pool-illustration.png" alt="pool illustration" class="z-0 max-w-2xl">
-						<img src="/technician-with-big-wrench.png" alt="illustration of technician with big wrench" class="z-10 absolute right-10 max-w-xs">
-					</div>
-					<br/>
-					<p class="text-3xl">We provide service to Fafco Solar Pool Heating customers in Arizona and Nevada.</p>
-					<br/>
-					<p class="text-3xl">Do you need service on your Fafco Solar Pool Heating system?  Fill out the contact form on this page, and we will reach out to you.</p>
-					<br/>
-					  <img src="/badges-row.png" alt="badges row - 40,000 Installations in The Southwest, Trusted and Referred for Over 36 Years, 36 Years Anniversary" class="max-w-full">
-				  </div>
-			</div>
-		</section>
-	</main>
+            <p class="text-xl lg:text-3xl">
+              We provide service to Fafco Solar Pool Heating customers in
+              Arizona and Nevada.
+            </p>
+            <br />
+            <p class="text-xl lg:text-3xl">
+              Do you need service on your Fafco Solar Pool Heating system? Fill
+              out the contact form on this page, and we will reach out to you.
+            </p>
+          </div>
+          <br />
+          <img
+            src="/badges-row.png"
+            alt="badges row - 40,000 Installations in The Southwest, Trusted and Referred for Over 36 Years, 36 Years Anniversary"
+            class="max-w-full"
+          />
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>
 
 <style></style>

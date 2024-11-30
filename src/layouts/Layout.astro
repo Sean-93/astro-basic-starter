@@ -1,10 +1,10 @@
 ---
 interface Props {
-	title: string;
-	description: string;
-	keywords: string;
-	canonicalURL: string;
-	robots: string;
+  title: string;
+  description: string;
+  keywords: string;
+  canonicalURL: string;
+  robots: string;
 }
 
 const { title, description, keywords, canonicalURL, robots } = Astro.props;
@@ -16,52 +16,52 @@ import Footer from "../components/Footer.astro";
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- FAVICON -->
-		<!-- <link rel="icon" type="image/svg" href="/favicon.svg" /> -->
-		<!-- THEME COLOR -->
-		<meta name="theme-color" content="" />
-		<!-- GENERIC METADATA -->
-		<meta name="author" content="Sean Rooney" />
-		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content={description} />
-		<meta name="keywords" content={keywords} />
-		<!-- CANONICAL URL -->
-		<link rel="canonical" href={canonicalURL} />
-		<!-- ROBOTS -->
-		<meta name="robots" content={robots} />
-		<!-- OPENGRAPH TAGS (SOCIAL MEDIA) -->
-		<meta property="og:type" content="website" />
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content={description} />
-		<meta property="og:url" content={canonicalURL} />
-		<!-- TWITTER/X CARD DATA -->
-		<meta name="twitter:title" content={title} />
-		<meta name="twitter:description" content={description} />
-  <!-- FONTAWESOME -->
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-  integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
-		<!-- TITLE -->
-		<title>{title}</title>
-	</head>
-	<body>
-		<!-- NAVIGATION BAR -->
-		<Nav />
-		<slot />
-		<!-- SITE FOOTER -->
-		<Footer />
-		<style is:global>
-  /* GOOGLE FONTS */
-  @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FAVICON -->
+    <!-- <link rel="icon" type="image/svg" href="/favicon.svg" /> -->
+    <!-- THEME COLOR -->
+    <meta name="theme-color" content="" />
+    <!-- GENERIC METADATA -->
+    <meta name="author" content="Sean Rooney" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <!-- CANONICAL URL -->
+    <link rel="canonical" href={canonicalURL} />
+    <!-- ROBOTS -->
+    <meta name="robots" content={robots} />
+    <!-- OPENGRAPH TAGS (SOCIAL MEDIA) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <!-- TWITTER/X CARD DATA -->
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <!-- FONTAWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- TITLE -->
+    <title>{title}</title>
+  </head>
+  <body>
+    <!-- NAVIGATION BAR -->
+    <Nav />
+    <slot />
+    <!-- SITE FOOTER -->
+    <Footer />
+    <style is:global>
+      /* GOOGLE FONTS */
+      @import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap");
 
-  html {
+      html {
         font-family: "Baloo 2", sans-serif;
         background-color: #ffffff;
         scroll-behavior: smooth;
@@ -72,16 +72,14 @@ import Footer from "../components/Footer.astro";
         @apply text-slate-800;
       }
 
-
-
-	  main {
-        background-image: url("/green-half-bubble-1.png"), url("/gray-bubbles.png"),
-          url("/green-half-bubble-2.png");
-        background-position: 0% 5%, 50% 2.5%, top right;
+      main {
+        background-image: url("/green-half-bubble-1.png"),
+          url("/gray-bubbles.png"), url("/green-half-bubble-2.png");
+        background-position: 0% 5%, 50% 2.5%, 100% 20%;
         background-repeat: no-repeat, no-repeat, no-repeat;
-        background-size: 10%, 15%, 15%, 15%;
+        background-size: 10%, 15%, 20%;
         pointer-events: auto;
       }
-		</style>
-	</body>
+    </style>
+  </body>
 </html>
