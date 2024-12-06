@@ -1,0 +1,18 @@
+{
+  "name": "astro-basic-starter",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.2.1",
+    "@astrojs/tailwind": "^5.1.3",
+    "astro": "^5.0.3",
+    "tailwindcss": "^3.4.4"
+  }
+}

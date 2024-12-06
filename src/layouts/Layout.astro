@@ -1,0 +1,84 @@
+---
+interface Props {
+	title: string;
+	description: string;
+	keywords: string;
+	canonicalURL: string;
+	robots: string;
+}
+
+const { title, description, keywords, canonicalURL, robots } = Astro.props;
+
+// COMPONENTS
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- FAVICON -->
+		<link rel="icon" type="image/svg" href="/favicon.svg" />
+		<!-- THEME COLOR -->
+		<meta name="theme-color" content="#800080" />
+		<!-- GENERIC METADATA -->
+		<meta name="author" content="Sean Rooney" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords} />
+		<!-- CANONICAL URL -->
+		<link rel="canonical" href={canonicalURL} />
+		<!-- ROBOTS -->
+		<meta name="robots" content={robots} />
+		<!-- OPENGRAPH TAGS (SOCIAL MEDIA) -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonicalURL} />
+		<!-- TWITTER/X CARD DATA -->
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<!-- GOOGLE MATERIAL ICONS -->
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<!-- TITLE -->
+		<title>{title}</title>
+	</head>
+	<body>
+		<!-- NAVIGATION BAR -->
+		<Nav />
+		<slot />
+		<!-- SITE FOOTER -->
+		<Footer />
+		<style is:global>
+			/* GOOGLE FONTS */
+			@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+			html {
+				font-family: "Open Sans", sans-serif;
+				@apply text-slate-900;
+			}
+
+			h1 {
+				@apply text-5xl tracking-tight font-black text-purple-900; 
+			}
+
+			p, a {
+				@apply text-lg;
+			}
+
+			li {
+				@apply font-semibold;
+			}
+
+			a {
+				@apply text-sky-500 font-medium hover:underline underline-offset-4 break-words;
+			}
+
+		</style>
+	</body>
+</html>
